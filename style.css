@@ -5,7 +5,6 @@ body
 img {
     height: 150px;
     width: 150px;
-    border-radius: 100%;
 }
 
 figure {
@@ -37,8 +36,14 @@ section
     text-align: center; 
 }
 
-.btn{
+.btn-info{
     position: fixed;
     bottom: 0px;
     right: 0px; 
+}
+
+#startButton{
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }

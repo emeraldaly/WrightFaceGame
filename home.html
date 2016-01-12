@@ -9,70 +9,86 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="game.js"></script>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <head>
-    <meta name="viewport" content="width=device-width"> 
-    <title>Click that Female Comedian</title>
-   <h1>Click that Female Comedian</h1>
+  <meta name="viewport" content="width=device-width"> 
+  <title>Click that Female Comedian</title>
+  <h1>Click that Female Comedian</h1>
 </head>
 
 <body>
-<!--     <button class="btn btn-info" onclick="countdown()">Click to play</button>  -->
-    <section class="container-fluid">
-        <p>Click as many women comedians in 20 seconds as you can. No repeats!</p>
-        <section class="row">
-          <div class="col-lg-12 col-md-3 col-xs-12">
-              <img src="http://listverse.wpengine.netdna-cdn.com/wp-content/uploads/2008/10/lucille-ball.jpg.gif" alt="Lucille Ball" onclick="countup(); this.onclick=null">
-              <img src="https://zeldaandscout.files.wordpress.com/2015/01/leslie-jones.jpg" alt="Leslie Jones" onclick="countup(); this.onclick=null">
-              <img src="https://s-media-cache-ak0.pinimg.com/236x/af/5b/ac/af5bac062febf09e224b34301604f9e8.jpg" alt="Kristen Schaal" onclick="countup(); this.onclick=null">
-              <img src="http://ia.media-imdb.com/images/M/MV5BMjE2MDkxNjE1NV5BMl5BanBnXkFtZTgwNjQ3MzUwMzE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" img="Kate Micucci" onclick="countup(); this.onclick=null">
-              <img src="http://www.vogue.com/wp-content/uploads/2014/08/amy-schumer-female-comedian_175744340635.jpg" img="Amy Schumer" onclick="countup(); this.onclick=null">
-              <img src="http://www.tuxboard.com/photos/2014/08/Julia-Louis-Dreyfus.jpg" img="Louis Dreyfus" onclick="countup(); this.onclick=null">
-              <img src="https://media.livenation.com/artists/78352/78352-tap-67025.jpg?1374692022" img="Kathy Griffin" onclick="countup(); this.onclick=null">
-              <img src="http://www.glamour.com/images/entertainment/2013/03/mindy-kaling-cover-square-w352.jpg" img="Mindy Kaling" onclick="countup(); this.onclick=null">
-              <img src="http://www-tc.pbs.org/weta/finding-your-roots/files/2014/07/Tina-Fey-Headshot-3519_Retouched_Flat_Cropped.jpg" img="Tina Fey" onclick="countup(); this.onclick=null">
-              <img src="https://pmcdeadline2.files.wordpress.com/2011/03/mayarudolph_20110325183227.jpg" img="Maya Rudolph" onclick="countup(); this.onclick=null">
-              <img src="http://cdn2-www.afterellen.com/assets/uploads/images/021810wiig1.jpg" img="Kristen Wiig" onclick="countup(); this.onclick=null">
-              <img src="http://images.lifeandstylemag.com/uploads/posts/image/51751/melissa-mccarthy-3.jpg" img="Melissa McCarthy" onclick="countup(); this.onclick=null">
-              <img src="http://2.bp.blogspot.com/_y1USaJemzSs/TNy9Er89pkI/AAAAAAAAFoI/jELJ1U9nPp0/s1600/jenny-slate.jpg" img="Jenny Slate" onclick="countup(); this.onclick=null">
-              <img src="http://ia.media-imdb.com/images/M/MV5BMTM2NzI3NTU5Nl5BMl5BanBnXkFtZTcwODkxODAwNA@@._V1_UY317_CR10,0,214,317_AL_.jpg" img= "Sarah Silverman" onclick="countup(); this.onclick=null">
-              <img src="http://hgtvhome.sndimg.com/content/dam/images/hgtv/editorial/profiles/talent/ellen-degeneres/hgtv-avatar-talent-ellen-degeneres-3.jpg.rend.hgtvcom.616.616.jpeg" img="Ellen Degeneres" onclick="countup(); this.onclick=null">
-             <img src="http://images.amcnetworks.com/wetv.com/wp-content/uploads/2013/09/jkb_joan_rivers_bio_460x460.jpg" img="Joan Rivers" onclick="countup(); this.onclick=null">
-             <img src="http://cdn04.cdn.justjared.com/wp-content/uploads/2009/04/poehler-parks/amy-poehler-parks-and-recreation-21.jpg" img="Amy Poehler" onclick="countup(); this.onclick=null">
-             <img src="http://i2.cdn.turner.com/cnn/dam/assets/130801162340-janeane-garofalo-comedian-entertain-feature.jpg" img="Janeane Garofalo" onclick="countup(); this.onclick=null">
-             <img src="http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2015/04/0414_cecily-strong.jpg" img="Celia Strong" onclick="countup(); this.onclick=null">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Riki_Lindhome_2013_WonderCon_(cropped).jpg" img="Rikki Lindhome" onclick="countup(); this.onclick=null">
+  <!-- REMOVED     <button class="btn btn-info" onclick="countdown()">Click to play</button>  -->
+  <button id="startButton" class="btn btn-primary">Click to play</button>
+  <section class="container-fluid">
+    <p>Click as many women comedians in 20 seconds as you can. No repeats!</p>
+    <section class="row">
+      <div class="col-lg-12 col-md-3 col-xs-12">
+        <img class="img-circle"src="http://listverse.wpengine.netdna-cdn.com/wp-content/uploads/2008/10/lucille-ball.jpg.gif" alt="Lucille Ball">
+        <img class="img-circle"src="https://zeldaandscout.files.wordpress.com/2015/01/leslie-jones.jpg" alt="Leslie Jones">
+        <img class="img-circle"src="https://s-media-cache-ak0.pinimg.com/236x/af/5b/ac/af5bac062febf09e224b34301604f9e8.jpg" alt="Kristen Schaal">
+        <img class="img-circle"src="http://ia.media-imdb.com/images/M/MV5BMjE2MDkxNjE1NV5BMl5BanBnXkFtZTgwNjQ3MzUwMzE@._V1_UY1200_CR85,0,630,1200_AL_.jpg" img="Kate Micucci">
+        <img class="img-circle"src="http://www.vogue.com/wp-content/uploads/2014/08/amy-schumer-female-comedian_175744340635.jpg" img="Amy Schumer">
+        <img class="img-circle"src="http://www.tuxboard.com/photos/2014/08/Julia-Louis-Dreyfus.jpg" img="Louis Dreyfus">
+        <img class="img-circle"src="https://media.livenation.com/artists/78352/78352-tap-67025.jpg?1374692022" img="Kathy Griffin">
+        <img class="img-circle"src="http://www.glamour.com/images/entertainment/2013/03/mindy-kaling-cover-square-w352.jpg" img="Mindy Kaling">
+        <img class="img-circle"src="http://www-tc.pbs.org/weta/finding-your-roots/files/2014/07/Tina-Fey-Headshot-3519_Retouched_Flat_Cropped.jpg" img="Tina Fey">
+        <img class="img-circle"src="https://pmcdeadline2.files.wordpress.com/2011/03/mayarudolph_20110325183227.jpg" img="Maya Rudolph">
+        <img class="img-circle"src="http://cdn2-www.afterellen.com/assets/uploads/images/021810wiig1.jpg" img="Kristen Wiig">
+        <img class="img-circle"src="http://images.lifeandstylemag.com/uploads/posts/image/51751/melissa-mccarthy-3.jpg" img="Melissa McCarthy">
+        <img class="img-circle"src="http://2.bp.blogspot.com/_y1USaJemzSs/TNy9Er89pkI/AAAAAAAAFoI/jELJ1U9nPp0/s1600/jenny-slate.jpg" img="Jenny Slate">
+        <img class="img-circle"src="http://ia.media-imdb.com/images/M/MV5BMTM2NzI3NTU5Nl5BMl5BanBnXkFtZTcwODkxODAwNA@@._V1_UY317_CR10,0,214,317_AL_.jpg" img= "Sarah Silverman">
+        <img class="img-circle"src="http://hgtvhome.sndimg.com/content/dam/images/hgtv/editorial/profiles/talent/ellen-degeneres/hgtv-avatar-talent-ellen-degeneres-3.jpg.rend.hgtvcom.616.616.jpeg" img="Ellen Degeneres">
+        <img class="img-circle"src="http://images.amcnetworks.com/wetv.com/wp-content/uploads/2013/09/jkb_joan_rivers_bio_460x460.jpg" img="Joan Rivers">
+        <img class="img-circle"src="http://cdn04.cdn.justjared.com/wp-content/uploads/2009/04/poehler-parks/amy-poehler-parks-and-recreation-21.jpg" img="Amy Poehler">
+        <img class="img-circle"src="http://i2.cdn.turner.com/cnn/dam/assets/130801162340-janeane-garofalo-comedian-entertain-feature.jpg" img="Janeane Garofalo">
+        <img class="img-circle"src="http://s3.amazonaws.com/media.wbur.org/wordpress/11/files/2015/04/0414_cecily-strong.jpg" img="Celia Strong">
+        <img class="img-circle"src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Riki_Lindhome_2013_WonderCon_(cropped).jpg" img="Rikki Lindhome">
+      </div>
+
+
+
+      <!-- Trigger the modal with a button -->
+      <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+      <!-- Verify Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">No errors in this repo!!!</h4>
+            </div>
+            <div class="modal-picture">
+              <img src="images/NeelyT.jpg">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
 
-  
-
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">No errors in this repo!!!</h4>
-        </div>
-        <div class="modal-body">
-          <img src="images/NeelyT.jpg">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
-    </div>
-  </div>
 
-        </section>
+      <!-- End Game Modal -->
+      <div class="modal fade bs-example-modal-sm" id="resultModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Results</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
     </section>
+  </section>
 
 
 
