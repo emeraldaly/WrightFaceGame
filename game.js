@@ -1,13 +1,39 @@
-var counter = 0;
+$(document).ready(function(){
 
-function countup() {
-  counter = counter + 1;
-}
+  var counter = 0;
+  
+  $("img").addClass("img-responsive");
+  $(".img-responsive").attr("disabled", true);
+
+  $(".img-responsive").on("click", function(){
+    if($(this).attr("disabled")){
+      return;
+    } else{
+      $(this).removeClass("on").addClass("off").attr("disabled", true);
+      countup();
+    }
+  });
+
+  function countup() {
+    counter = counter + 1;
+  }
 
 
-function countdown() {
-  setTimeout(function countandgive() { 
-      alert("You clicked " +counter+ " Comedians");
-     
-     }, 20000);
-}
+  $('#startButton').on('click', function () {
+    $(".img-responsive").attr("disabled", false).removeClass("off").addClass("on");
+    
+    setTimeout(function countandgive(){
+      $(".modal-body").empty();
+      $(".modal-body").append("You clicked " + counter + " comedians.");
+      $("#resultModal").modal("show");
+
+    }, 20000);
+  });
+
+});
+
+
+
+
+
+
