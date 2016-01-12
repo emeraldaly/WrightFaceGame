@@ -1,8 +1,8 @@
-document.ready(function(){
+$(document).ready(function(){
 
   var counter = 0;
-  $("td img").addClass("img-responsive");
-  $(".img").attr("disabled", true);
+  $("img").addClass("img-responsive");
+  $(".img-responsive").attr("disabled", true);
 
   $(".img-responsive").on("click", function(){
     if($(this).attr("disabled")){
@@ -19,13 +19,13 @@ document.ready(function(){
 
 
   $('#startButton').on('click', function () {
-    counter = 0;
     $(".img-responsive").attr("disabled", false).removeClass("off").addClass("on");
-    setTimeout(function countAndGive(){
+    setTimeout(function countandgive(){
       $(".modal-body").empty();
-      $(".modal-body").append("<p>You clicked " + scoreCounter + "comedians.</p>");
+      $(".modal-body").append("<p>You clicked " + counter + "comedians.</p>");
       $("#resultModal").modal("show");
-    }, 20000);
+
+    }, 3000);
   });
 
 });
