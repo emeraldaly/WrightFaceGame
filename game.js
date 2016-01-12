@@ -20,12 +20,13 @@ $(document).ready(function(){
 
   $('#startButton').on('click', function () {
     $(".img-responsive").attr("disabled", false).removeClass("off").addClass("on");
+    
     setTimeout(function countandgive(){
       $(".modal-body").empty();
-      $(".modal-body").append("<p>You clicked " + counter + "comedians.</p>");
+      $(".modal-body").append("You clicked " + counter + " comedians.");
       $("#resultModal").modal("show");
 
-    }, 3000);
+    }, 20000);
   });
 
 });

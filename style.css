@@ -5,34 +5,29 @@ body
 .img-responsive {
     height: 150px;
     width: 150px;
-}
-
-figure {
-    margin: auto;
+    display: inline-grid;
 }
 
 figure .img-responsive {
-    display: inline-grid;
-    height: 100px;
-    width: 150px;
-    border-radius: 0px;
+    margin: auto;
 }
+
 h1
 {
     font-family: 'Nunito', sans-serif;
-    color: red;
+    color: white;
     text-align: center;
 }
 p
 { 
     font-family: 'Poiret One', cursive;
-    color: red;
+    color: white;
     text-align: center;
 }
 section
 {
     font-family: 'Poiret One', cursive;
-    color: red; 
+    color: white; 
     text-align: center; 
 }
 
@@ -46,4 +41,8 @@ section
     position: fixed;
     top: 0px;
     left: 0px;
+}
+
+.off{
+  border: 5px solid red;
 }
