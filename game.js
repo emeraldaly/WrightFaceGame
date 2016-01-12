@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   var counter = 0;
+  
   $("img").addClass("img-responsive");
   $(".img-responsive").attr("disabled", true);
 
