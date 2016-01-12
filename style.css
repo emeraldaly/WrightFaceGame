@@ -21,18 +21,24 @@ figure img {
 h1
 {
     font-family: 'Nunito', sans-serif;
-    color: white;
+    color: red;
     text-align: center;
 }
 p
 { 
     font-family: 'Poiret One', cursive;
-    color: white;
+    color: red;
     text-align: center;
 }
 section
 {
     font-family: 'Poiret One', cursive;
-    color: white; 
+    color: red; 
     text-align: center; 
+}
+
+.btn{
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
 }
