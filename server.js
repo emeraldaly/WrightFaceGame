@@ -7,7 +7,7 @@ app.use(logger('dev'));
 app.use(express.static(__dirname + "/public"));
 
 app.get('*', function(req, res) {
-  res.sendFile(process.cwd() + '/clickface.html');
+  res.sendFile(process.cwd() + '/public/clickface.html');
 });
 
 app.listen(PORT, function(){

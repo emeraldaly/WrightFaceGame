@@ -3,22 +3,12 @@ body
     background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png)
     color: white;
 }
-img {
+.img-responsive {
     height: 150px;
     width: 150px;
-    border-radius: 100%;
-}
-
-figure {
-    margin: auto;
-}
-
-figure img {
     display: inline-grid;
-    height: 100px;
-    width: 150px;
-    border-radius: 0px;
 }
+
 h1
 {
     font-family: 'Nunito', sans-serif;
@@ -36,4 +26,19 @@ section
     font-family: 'Poiret One', cursive;
     color: white; 
     text-align: center; 
+}
+
+.btn-info{
+    bottom: 0px;
+    right: 0px; 
+}
+
+#startButton{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.off{
+  border: 5px solid red;
 }
